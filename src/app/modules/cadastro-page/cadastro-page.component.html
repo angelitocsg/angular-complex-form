@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="pt-3 pb-3">Cadastro de clientes</h1>
+  <form (submit)="onSubmit($event)">
+    <app-dados-pessoais-form />
+    <div class="row">
+      <div class="col">
+        <app-contatos-form />
+      </div>
+      <div class="col">
+        <app-enderecos-form />
+      </div>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+  </form>
+</div>
