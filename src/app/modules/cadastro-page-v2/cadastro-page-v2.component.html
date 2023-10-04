@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="pt-3 pb-3">Cadastro de clientes (v2)</h1>
+  <form [formGroup]="form" (submit)="onSubmit($event)">
+    <app-dados-pessoais-form (formReady)="addChildForm('dadosPessoais', $event)"
+      (removeForm)="removeChildForm('dadosPessoais')" />
+    <div class="row">
+      <div class="col">
+        <app-contatos-form (formReady)="addChildForm('contatos', $event)" (removeForm)="removeChildForm('contatos')" />
+      </div>
+      <div class="col">
+        <app-enderecos-form (formReady)="addChildForm('enderecos', $event)"
+          (removeForm)="removeChildForm('enderecos')" />
+      </div>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+  </form>
+</div>

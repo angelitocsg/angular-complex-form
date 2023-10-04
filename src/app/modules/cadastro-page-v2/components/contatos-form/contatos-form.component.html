@@ -1,0 +1,13 @@
+<div class="card mb-3">
+  <div class="card-header">Contatos</div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="celular" class="form-label">Celular</label>
+      <input type="tel" class="form-control" id="celular" [formControl]="form.controls.celular">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="email@company.com" [formControl]="form.controls.email">
+    </div>
+  </div>
+</div>
